@@ -13,7 +13,7 @@ public class main {
         Data data1 = new Data("Abba", "Zeynalo", 2006);
         Data data2 = new Data("bba", "Zeynalo", 2006);
         Data data3 = new Data("ba", "Zeynalo", 2006);
-        Data data4 = new Data("ba", "Zeynal", 2006);
+        Data data4 = new Data("b", "Zeynal", 2006);
         try(ResourcePool pool = new ResourcePool(settings)) {
             ExpensiveResource abbasR = pool.acquireResource(abbas);
             System.out.println(pool.sizeOfPool());
