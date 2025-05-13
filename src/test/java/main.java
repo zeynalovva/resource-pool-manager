@@ -3,7 +3,7 @@ import com.zeynalovv.Resource.*;
 public class main {
     public static void main(String[] args) {
         ResourcePoolConfig settings = new ResourcePoolConfig.Builder()
-                .maxPoolSize(5)
+                .maxPoolSize(6)
                 .minPoolSize(0)
                 .timeoutMillis(100)
                 .query("salam")
@@ -27,8 +27,11 @@ public class main {
             System.out.println(pool.sizeOfPool());
             ExpensiveResource data4R = pool.acquireResource(data4);
             System.out.println(pool.sizeOfPool());
+            //Thread.sleep(10000);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
+
+
     }
 }
